@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="sidebar" data-sidebar>
+    <div class="wrapper wrapper-1">
+      <a href="/">
+        <img src="src/images/logo-dark.svg" alt="NoteKeeper" class="dark-logo">
+        <img src="src/images/logo-light.svg" alt="NoteKeeper" class="light-logo">
+      </a>
+      <button class="icon-btn menu-btn large" aria-label="close-menu" data-sidebar-toggler>
+        <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        <div class="state-layer"></div>
+      </button>
+    </div>
+    <button class="fab" data-note-create-btn>
+      <span class="text text-label-large">New</span>
+      <span class="material-symbols-rounded" aria-hidden="true">add</span>
+      <div class="state-layer"></div>
+    </button>
+    <div class="wrapper wrapper-2">
+      <h2 class="text-title-small">NOTEBOOKS</h2>
+      <button class="icon-btn small" data-add-notebook aria-label="create new notebook" data-tooltip="create new notebook">
+        <span class="material-symbols-rounded" aria-hidden="true">add</span>
+        <div class="state-layer"></div>
+      </button>
+    </div>
+    <nav class="nav custom-scrollbar" data-sidebar-list>
+      <div class="nav-item">
+        <p class=" text text-label-large" data-notebook-field>My Notebook</p>
+        <button class="icon-btn small" aria-label="edit notebook" data-tooltip="edit notebook" data-edit-btn>
+          <span class="material-symbols-rounded" aria-hidden="true">edit</span>
+          <div class="state-layer"></div>
+        </button>
+        <button class="icon-btn small" aria-label="delete notebook" data-tooltip="delete notebook" data-delete-btn>
+          <span class="material-symbols-rounded" aria-hidden="true">delete</span>
+          <div class="state-layer"></div>
+        </button>
+        <div class="state-layer"></div>
+      </div>
+    </nav>
+    <div class="cp-info">
+      <span class="text-label-large">Copyright 2024 <strong>SALAH EDDINE MJ</strong></span>
+    </div>
+  </header>
+  <div class="overlay" data-overlay data-sidebar-toggler></div>
+
+  <main class="main">
+    <div class="header">
+      <div class="wrapper">
+        <p class="title text-title-large" data-greeting>Good Night</p>
+        <span class="text text-body-medium">Sat, Mar 09 2024</span>
+      </div>
+      <button class="icon-btn theme-btn large" data-theme-btn data-tooltip="toggle-theme" aria-label="toggle-theme">
+        <span class="material-symbols-rounded dark-icon" aria-hidden="true">dark_mode</span>
+        <span class="material-symbols-rounded light-icon" aria-hidden="true">light_mode</span>
+        <div class="state-layer"></div>
+      </button>
+      <button class="icon-btn menu-btn large" data-sidebar-toggler aria-label="close-menu" data-tooltip="open-menu">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+        <div class="state-layer"></div>
+      </button>
+    </div>
+    <h2 class="title text-title-medium" data-note-panel-title>My Notebook</h2>
+    <div class="note-list" data-note-panel>
+      <div class="card">
+        <h3 class="card-title text-title-medium">Note title</h3>
+        <p class="card-text text-body-large">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur, impedit ipsum ducimus, voluptas fugit dolorem
+          beatae numquam maiores ea a expedita. Voluptates sunt
+          cum facere ex, libero aperiam placeat impedit.
+        </p>
+        <div class="wrapper">
+          <span class="card-time text-label-large">20 min ago</span>
+          <button class="icon-btn large" aria-label="delete-note" data-tooltip="delete note">
+            <span class="material-symbols-rounded" aria-hidden="true">delete</span>
+            <div class="state-layer"></div>
+          </button>
+        </div>
+        <div class="state-layer"></div>
+      </div>
+    </div>
+
+    <button class="fab" data-note-create-btn aria-label="new note">
+      <span class="material-symbols-rounded" aria-hidden="true">add</span>
+      <div class="state-layer"></div>
+    </button>
+    <!-- <div class="modal">
+      <button class="icon-btn large" aria-label="close-modal">
+        <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        <div class="state-layer"></div>
+      </button>
+      <input class="modal-title text-title-medium" type="text" placeholder="Untitled" value="Untitled" data-note-field>
+      <textarea class="modal-text text-body-large" placeholder="Take a note..." data-note-field></textarea>
+      <div class="modal-footer">
+        <span class="time text-label-large">20 min ago</span>
+        <button class="btn text">
+          <span class="text-label-large">Save</span>
+          <div class="state-layer"></div>
+        </button>
+      </div>
+    </div> -->
+    <!-- <div class="modal">
+      <h3 class="modal-title text-title-medium">Are you sure you want to delete <strong>"Note title</strong>?</h3>
+      <div class="modal-footer">
+        <button class="btn text">
+          <span class="text-label-large">Cancel</span>
+          <div class="state-layer"></div>
+        </button>
+        <button class="btn fill">
+          <span class="text-label-large">Delete</span>
+          <div class="state-layer"></div>
+        </button>
+      </div>
+    </div> -->
+    <!-- <span class="tooltip text-body-small">tooltip text</span> -->
+    <div class="empty-notes">
+      <span class="material-symbols-rounded">note_stack</span>
+      <div class="text-headline-small">No notes</div>
+    </div>
+  </main>
+</body>
+</html>
